@@ -10,7 +10,7 @@ module CarrierWave
       end
 
       def perform(*args)
-        Chewy.strategy(:atomic)
+        # Chewy.strategy(:atomic)
         record = super(*args)
 
         if record && record.send(:"#{column}").present?
